@@ -34,8 +34,12 @@ The vehicle motion model recieves linear and angular velocity odometry readings 
 ![Screenshot (465)](https://user-images.githubusercontent.com/71186496/106354358-494b4780-6317-11eb-9d08-4fa4882345c0.png)
 
 ## Getting Started
+Before going further you must be familiar with [Bayes Filter](https://www.youtube.com/watch?v=oUq0a8jHSQg "Click to view Youtube video") and [Kalman Filter](https://www.youtube.com/watch?v=o_HW6GnLqvg "Click to view Youtube video").If not,then please visit the following for more details :
 
-Since the models are nonlinear, we are using the Extended Kalman Filter (EKF) as the state estimator. The EKF consists of following two steps:
+- [More on Bayes Filter](https://leimao.github.io/article/Introduction-to-Bayesian-Filter/ "Click to view blog")
+- [More on Kalman Filter](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/ "Click to view")
+
+Since the models are nonlinear, we are using the [Extended Kalman Filter (EKF)](https://towardsdatascience.com/extended-kalman-filter-43e52b16757d "Click to view") as the state estimator. The EKF consists of following two steps:
 
 - The prediction step, which uses odometry measurements and the motion model to produce a state and covariance estimate at a given timestep, and
 - The correction step, which uses the range and bearing measurements provided by the LIDAR to correct the pose and pose covariance estimates
